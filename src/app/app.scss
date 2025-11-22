@@ -1,0 +1,94 @@
+.app-shell {
+  min-height: 100vh;
+  background: #05050a;
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background: linear-gradient(to bottom, #000000ee, #000000cc, transparent);
+  backdrop-filter: blur(8px);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #e50914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.logo-text {
+  display: flex;
+  gap: 4px;
+  font-size: 1.2rem;
+}
+
+.logo-main {
+  font-weight: 700;
+}
+
+.logo-sub {
+  color: #ff4b4b;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #f5f5f5;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s;
+}
+
+.nav-item:hover {
+  background: #ffffff18;
+  transform: translateY(-1px);
+}
+
+.nav-item--active {
+  background: #e50914;
+}
+
+.nav-item--active:hover {
+  background: #f6121d;
+}
+
+.nav-icon {
+  font-size: 1rem;
+}
+
+.main {
+  padding: 24px 48px 40px;
+}
