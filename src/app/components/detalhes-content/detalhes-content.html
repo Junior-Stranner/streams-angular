@@ -1,0 +1,39 @@
+<div class="container" *ngIf="!loading && content">
+  <div class="banner" [style.background-image]="'url(' + content.banner + ')'">
+    <div class="overlay">
+      <h1>{{ content.title }}</h1>
+      <p class="type">
+        {{ content.type === 'movie' ? 'Filme' : 'Série' }} | {{ content.releaseYear }}
+      </p>
+    </div>
+  </div>
+
+  <div class="content-details">
+    <div class="poster">
+      <img [src]="content.thumbnail" [alt]="content.title" />
+    </div>
+
+    <div class="info">
+      <div class="stats">
+        <span class="rating">⭐ {{ content.imdbRating }}</span>
+        <span class="duration">{{ content.duration }} min</span>
+        <span class="classification">{{ content.rating }}</span>
+      </div>
+
+      <h2>Sinopse</h2>
+      <p>{{ content.synopsis }}</p>
+
+      <h3>Diretor</h3>
+      <p>{{ content.director }}</p>
+
+      <h3>Elenco</h3>
+      <p>{{ content.cast?.join(', ') }}</p>
+
+      <div class="actions">
+        <a [routerLink]="['/reviews', content.id]" class="btn-reviews"> Ver avaliações </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loading" class="loading">Carregando detalhes...</div>

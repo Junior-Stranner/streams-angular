@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="title">Filmes e Séries</h1>
+
+  <div *ngIf="loading" class="loading">
+    Carregando conteúdos...
+  </div>
+
+  <div class="grid" *ngIf="!loading">
+    <div class="card" *ngFor="let item of contents">
+      <a [routerLink]="['/content', item.id]">
+        <img [src]="item.thumbnail" class="thumb" alt="{{ item.title }}">
+
+        <div class="card-info">
+          <h3 class="name">{{ item.title }}</h3>
+          <p class="year">{{ item.releaseYear }}</p>
+          <p class="rating">⭐ {{ item.imdbRating }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,114 @@
+.container {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.new-review-form {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.btn-submit {
+  background: #e50914;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.btn-submit:hover {
+  background: #f40612;
+}
+
+/* Lista de reviews */
+.reviews-list {
+  margin-top: 30px;
+}
+
+.review-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.review-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.stars {
+  color: #ffd700;
+}
+
+.review-card h4 {
+  margin: 8px 0;
+}
+
+.review-card p {
+  color: #ccc;
+}
+
+.no-reviews {
+  text-align: center;
+  color: #aaa;
+  margin-top: 20px;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 30px;
+}

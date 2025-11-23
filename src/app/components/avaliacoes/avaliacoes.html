@@ -1,0 +1,81 @@
+<div class="container">
+  <h1>Avaliações</h1>
+
+  <!-- Formulário de nova review -->
+  <div class="new-review-form">
+    <h2>Deixe sua avaliação</h2>
+
+    <form (ngSubmit)="submitReview()" #reviewForm="ngForm">
+      <div class="form-group">
+        <label for="authorName">Seu nome:</label>
+        <input
+          id="authorName"
+          type="text"
+          [(ngModel)]="newReview.authorName"
+          name="authorName"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Nota (1 a 5):</label>
+        <select id="rating" [(ngModel)]="newReview.rating" name="rating" required>
+          <option [value]="1">⭐ (1)</option>
+          <option [value]="2">⭐⭐ (2)</option>
+          <option [value]="3">⭐⭐⭐ (3)</option>
+          <option [value]="4">⭐⭐⭐⭐ (4)</option>
+          <option [value]="5">⭐⭐⭐⭐⭐ (5)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="title">Título da avaliação:</label>
+        <input id="title" type="text" [(ngModel)]="newReview.title" name="title" required />
+      </div>
+
+      <div class="form-group">
+        <label for="comment">Comentário:</label>
+        <textarea
+          id="comment"
+          [(ngModel)]="newReview.comment"
+          name="comment"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar avaliação</button>
+    </form>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="loading">Carregando avaliações...</div>
+
+  <!-- Lista de reviews -->
+  <div *ngIf="!loading" class="reviews-list">
+    <h2>Todas as avaliações ({{ reviews.length }})</h2>
+
+    <div class="review-card" *ngFor="let review of reviews">
+      <div class="review-header">
+        <img [src]="review.authorAvatar" [alt]="review.authorName" class="avatar" />
+
+        <div class="review-info">
+          <h3>{{ review.authorName }}</h3>
+
+          <div class="stars">
+            <span *ngFor="let star of getStars(review.rating)">
+              {{ star }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <h4>{{ review.title }}</h4>
+      <p>{{ review.comment }}</p>
+    </div>
+
+    <div *ngIf="reviews.length === 0" class="no-reviews">
+      Ainda não há avaliações. Seja o primeiro a avaliar!
+    </div>
+  </div>
+</div>

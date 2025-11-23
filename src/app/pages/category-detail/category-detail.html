@@ -1,1 +1,17 @@
-<p>category-detail works!</p>
+<h1>Categorias</h1>
+
+<div *ngIf="loading">Carregando...</div>
+
+<div class="category-grid" *ngIf="!loading">
+  <div
+    class="category-item"
+    *ngFor="let category of categories"
+    (click)="openCategory(category.id)"
+  >
+    <app-category-card
+      [name]="category.name"
+      [image]="category.image"
+      [color]="category.color"
+    ></app-category-card>
+  </div>
+</div>

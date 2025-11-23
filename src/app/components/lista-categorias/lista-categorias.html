@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="title">Categoria</h1>
+
+  <div *ngIf="loading" class="loading">Carregando...</div>
+
+  <div class="grid" *ngIf="!loading && contents.length > 0">
+    <div class="card" *ngFor="let item of contents">
+      <a [routerLink]="['/content', item.id]">
+        <img [src]="item.thumbnail" class="thumb" alt="{{ item.title }}">
+        <div class="card-info">
+          <h3 class="name">{{ item.title }}</h3>
+          <p class="year">{{ item.releaseYear }}</p>
+          <p class="rating">⭐ {{ item.imdbRating }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && contents.length === 0" class="empty">
+    Nenhum conteúdo encontrado nessa categoria.
+  </div>
+</div>

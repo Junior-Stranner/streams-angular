@@ -1,0 +1,64 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.title {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.loading,
+.empty {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.thumb {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+.name {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.year {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.rating {
+  color: #f2b01e;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
