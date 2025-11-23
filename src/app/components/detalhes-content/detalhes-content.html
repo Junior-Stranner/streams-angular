@@ -27,7 +27,7 @@
       <p>{{ content.director }}</p>
 
       <h3>Elenco</h3>
-      <p>{{ content.cast?.join(', ') }}</p>
+      <p>{{ content.cast.join(', ') }}</p>
 
       <div class="actions">
         <a [routerLink]="['/reviews', content.id]" class="btn-reviews"> Ver avaliações </a>
